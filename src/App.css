@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #667eea;
+}
+
+.App {
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #667eea;
+}
+
+.menu-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.app-title {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.type-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.type-btn {
+  padding: 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: 1px solid #999;
+  cursor: pointer;
+  color: white;
+}
+
+.type-btn-repetition {
+  background-color: #f5576c;
+}
+
+.type-btn-duration {
+  background-color: #00f2fe;
+}
+
+.exercises-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.exercise-btn {
+  padding: 20px;
+  border: 1px solid #999;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  color: #333;
+}
+
+.exercise-btn-repetition {
+  background-color: #f5576c;
+  color: white;
+}
+
+.exercise-btn-duration {
+  background-color: #00f2fe;
+  color: #333;
+}
+
+.exercise-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.exercise-screen {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+.back-btn {
+  align-self: flex-start;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #999;
+  border: 1px solid #666;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.exercise-component {
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.exercise-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.counter {
+  font-size: 4rem;
+  color: #f5576c;
+  font-weight: bold;
+  margin: 30px 0;
+  font-family: monospace;
+}
+
+.timer {
+  font-size: 4rem;
+  color: #00f2fe;
+  font-weight: bold;
+  margin: 30px 0;
+  font-family: monospace;
+}
+
+.exercise-controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.exercise-btn-action {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid #999;
+  background-color: #ddd;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.btn-increment {
+  background-color: #f5576c;
+  color: white;
+}
+
+.btn-reset {
+  background-color: #ddd;
+  color: #333;
+}
+
+.btn-start {
+  background-color: #00f2fe;
+  color: #333;
+}
+
+.btn-stop {
+  background-color: #f5576c;
+  color: white;
+}
