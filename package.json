@@ -1,7 +1,7 @@
 {
   "name": "exercise-app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://jasongrandma.github.io/exercise-app",
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build",
