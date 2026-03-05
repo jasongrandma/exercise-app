@@ -53,6 +53,10 @@ body {
   background-color: #00f2fe;
 }
 
+.type-btn-running {
+  background-color: #4caf50;
+}
+
 .exercises-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -80,6 +84,11 @@ body {
 .exercise-btn-duration {
   background-color: #00f2fe;
   color: #333;
+}
+
+.exercise-btn-running {
+  background-color: #4caf50;
+  color: white;
 }
 
 .exercise-name {
@@ -175,4 +184,40 @@ body {
 .btn-stop {
   background-color: #f5576c;
   color: white;
+}
+
+.btn-lap {
+  background-color: #4caf50;
+  color: white;
+}
+
+.laps-container {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.laps-container h2 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.laps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lap-item {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import RepetitionExercise from './components/RepetitionExercise';
 import DurationExercise from './components/DurationExercise';
+import RunningExercise from './components/RunningExercise';
 
 function App() {
   const [selectedType, setSelectedType] = useState(null);
@@ -14,6 +15,9 @@ function App() {
     { id: 4, name: 'Plank Hold', type: 'duration' },
     { id: 5, name: 'Burpees', type: 'repetition' },
     { id: 6, name: 'Jumping Jacks', type: 'duration' },
+    { id: 7, name: '5K Run', type: 'running' },
+    { id: 8, name: 'Track Run', type: 'running' },
+    { id: 9, name: 'Outdoor Jog', type: 'running' },
   ];
 
   const renderTypeSelection = () => (
@@ -32,12 +36,20 @@ function App() {
         >
           Duration
         </button>
+        <button
+          className="type-btn type-btn-running"
+          onClick={() => setSelectedType('running')}
+        >
+          Running
+        </button>
       </div>
     </div>
   );
 
   const renderExerciseList = () => {
     const filteredExercises = exercises.filter((ex) => ex.type === selectedType);
+
+    const typeLabel = selectedType === 'repetition' ? 'Repetition' : selectedType === 'duration' ? 'Duration' : 'Running';
 
     return (
       <div className="menu-container">
@@ -47,7 +59,7 @@ function App() {
         >
           ← Back
         </button>
-        <h1 className="app-title">{selectedType === 'repetition' ? 'Repetition' : 'Duration'} Exercises</h1>
+        <h1 className="app-title">{typeLabel} Exercises</h1>
         <div className="exercises-grid">
           {filteredExercises.map((exercise) => (
             <button
@@ -78,8 +90,10 @@ function App() {
         </button>
         {type === 'repetition' ? (
           <RepetitionExercise name={name} />
-        ) : (
+        ) : type === 'duration' ? (
           <DurationExercise name={name} />
+        ) : (
+          <RunningExercise name={name} />
         )}
       </div>
     );
